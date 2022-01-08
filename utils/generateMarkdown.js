@@ -122,9 +122,8 @@ function generateMarkdown(userResponse) {
   }
 
   markdown += `
-
 ## Contact Me
-  
+
   * ${userResponse.email}
 `;
 
