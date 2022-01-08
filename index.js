@@ -60,25 +60,33 @@ const questions = [
       }
     },
   },
-  {
-    type: 'confirm',
-    name: 'confirmToC',
-    message: 'Would you like to add a Table of Contents?',
-    default: false,
-  },
-  {
-    type: 'checkbox',
-    name: 'contents',
-    message: 'Choose what you would like to include in your table of contents:',
-    choices: ['Installation', 'Usage', 'Credits', 'License', 'features'],
-    when: ({ confirmToC }) => {
-      if (confirmToC) {
-        return true;
-      } else {
-        return false;
-      }
-    },
-  },
+  // {
+  //   type: 'confirm',
+  //   name: 'confirmToC',
+  //   message: 'Would you like to add a Table of Contents?',
+  //   default: false,
+  // },
+  // {
+  //   type: 'checkbox',
+  //   name: 'contents',
+  //   message: 'Choose what you would like to include in your table of contents:',
+  //   choices: [
+  //     'Installation',
+  //     'Usage',
+  //     'Credits',
+  //     'License',
+  //     'features',
+  //     'contributing',
+  //     'tests',
+  //   ],
+  //   when: ({ confirmToC }) => {
+  //     if (confirmToC) {
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   },
+  // },
   {
     type: 'confirm',
     name: 'confirmInstall',
@@ -234,10 +242,8 @@ const writeFileAsync = util.promisify(writeToFile);
 async function init() {
   try {
     const userResponse = await inquirer.prompt(questions);
-    console.log(userResponse);
 
     const markdown = generateMarkdown(userResponse);
-    console.log(markdown);
 
     await writeFileAsync('README.md', markdown);
   } catch (error) {
