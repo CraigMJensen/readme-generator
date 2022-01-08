@@ -224,7 +224,7 @@ async function init() {
 
     const markdown = generateMarkdown(userResponse);
 
-    await writeFileAsync('./utils/README.md', markdown);
+    await writeFileAsync('./generated/README.md', markdown);
   } catch (error) {
     console.log(error);
   }
