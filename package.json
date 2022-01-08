@@ -1,7 +1,7 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "[How to create a Professional README](./readme-guide.md)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CraigMJensen/readme-generator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/CraigMJensen/readme-generator/issues"
+  },
+  "homepage": "https://github.com/CraigMJensen/readme-generator#readme"
 }

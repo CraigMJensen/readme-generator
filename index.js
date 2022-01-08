@@ -4,10 +4,7 @@ const fs = require('fs');
 const Choices = require('inquirer/lib/objects/choices');
 
 // TODO: Create an array of questions for user input
-const promptUser = (readmeData) => {
-  if (!readmeData) {
-    readmeData = [];
-  }
+const promptUser = () => {
   return inquirer
     .prompt([
       {
@@ -166,9 +163,29 @@ const promptUser = (readmeData) => {
       },
     ])
     .then((userData) => {
-      readmeData.push(userData);
-      const [dataObject] = [Object.values(readmeData[0])];
-      console.log(dataObject);
+      const allData = [
+        userData.name,
+        userData.github,
+        userData.title,
+        userData.description,
+        userData.contents,
+        userData.installation,
+        userData.usage,
+        userData.credits,
+        userData.license,
+      ];
+      const [
+        name,
+        github,
+        title,
+        description,
+        contents,
+        installation,
+        usage,
+        credits,
+        license,
+      ] = allData;
+      console.log(allData, userData);
     });
 };
 
