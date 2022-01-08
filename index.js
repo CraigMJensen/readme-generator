@@ -10,13 +10,13 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 const questions = [
   {
     type: 'input',
-    name: 'name',
-    message: 'What is your name? (REQUIRED)',
-    validate: (nameInput) => {
-      if (nameInput) {
+    name: 'email',
+    message: 'What is your Email? (REQUIRED)',
+    validate: (emailInput) => {
+      if (emailInput) {
         return true;
       } else {
-        console.log('Please enter your name!');
+        console.log('Please enter your Email!');
         return false;
       }
     },
@@ -60,33 +60,12 @@ const questions = [
       }
     },
   },
-  // {
-  //   type: 'confirm',
-  //   name: 'confirmToC',
-  //   message: 'Would you like to add a Table of Contents?',
-  //   default: false,
-  // },
-  // {
-  //   type: 'checkbox',
-  //   name: 'contents',
-  //   message: 'Choose what you would like to include in your table of contents:',
-  //   choices: [
-  //     'Installation',
-  //     'Usage',
-  //     'Credits',
-  //     'License',
-  //     'features',
-  //     'contributing',
-  //     'tests',
-  //   ],
-  //   when: ({ confirmToC }) => {
-  //     if (confirmToC) {
-  //       return true;
-  //     } else {
-  //       return false;
-  //     }
-  //   },
-  // },
+  {
+    type: 'confirm',
+    name: 'confirmToC',
+    message: 'Would you like to add a Table of Contents?',
+    default: false,
+  },
   {
     type: 'confirm',
     name: 'confirmInstall',
