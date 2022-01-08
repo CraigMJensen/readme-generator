@@ -1,7 +1,4 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-
-const { log } = require('console');
-
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 
@@ -54,11 +51,25 @@ function generateMarkdown(userResponse) {
 
   let markdown = `# ${userResponse.title}
 
+  
+  
+      ![badge](https://img.shields.io/badge/license-${userResponse.license}-green)
+   
+ 
+
 ## Description 
 
   * ${userResponse.description}
 
 `;
+  if (userResponse.confirmLink !== false) {
+    markdown += `
+## Link to Active Product
+
+  * http://${userResponse.github}.github.io/${userResponse.projectPath}/
+
+`;
+  }
 
   if (userResponse.confirmToC !== false) {
     markdown += generateToC;

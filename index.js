@@ -35,6 +35,25 @@ const questions = [
     },
   },
   {
+    type: 'confirm',
+    name: 'confirmLink',
+    message: 'Do you want to include a link for the live product?',
+    default: true,
+  },
+  {
+    type: 'input',
+    name: 'projectPath',
+    message:
+      'Enter the path name for your project repository: (http://github.com/<userName>/< *pathName* >',
+    when: ({ confirmLink }) => {
+      if (confirmLink) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+  {
     type: 'input',
     name: 'title',
     message: 'What is the title of the project? (REQUIRED)',
