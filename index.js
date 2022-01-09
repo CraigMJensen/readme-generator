@@ -146,15 +146,15 @@ const questions = [
     default: false,
   },
   {
-    type: 'checkbox',
+    type: 'list',
     name: 'license',
     message: 'What licensing do you want to use?',
     choices: [
       'MIT',
       'Apache',
-      'Cloud Native Computing Foundation',
+      'Cloud_Native_Computing_Foundation',
       'GNU',
-      'npm packages',
+      'npm_packages',
       'OpenBSD',
       'Rust',
       'WordPress',

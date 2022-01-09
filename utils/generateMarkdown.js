@@ -51,12 +51,9 @@ function generateMarkdown(userResponse) {
 
   let markdown = `# ${userResponse.title}
 
-  
-  
-      ![badge](https://img.shields.io/badge/license-${userResponse.license}-green)
+  ![badge](https://img.shields.io/badge/license-${userResponse.license}-green)
    
  
-
 ## Description 
 
   * ${userResponse.description}
@@ -102,9 +99,11 @@ function generateMarkdown(userResponse) {
 
   if (userResponse.confirmLicense !== false) {
     markdown += `
+  
 ## License
+  ![badge](https://img.shields.io/badge/license-${userResponse.license}-green)
 
-  * ${userResponse.license}
+  * <a src='https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt'>${userResponse.license}</a>
 `;
   }
 
