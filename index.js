@@ -149,16 +149,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: 'What licensing do you want to use?',
-    choices: [
-      'MIT',
-      'Apache',
-      'Cloud_Native_Computing_Foundation',
-      'GNU',
-      'npm_packages',
-      'OpenBSD',
-      'Rust',
-      'WordPress',
-    ],
+    choices: ['Apache_License_2.0', 'GNU_GPLv3', 'ISC', 'MIT'],
     when: ({ confirmLicense }) => {
       if (confirmLicense) {
         return true;
