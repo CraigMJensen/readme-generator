@@ -1,15 +1,3 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(userResponse) {
   let generateToC = `## Table of Contents`;
@@ -51,14 +39,27 @@ function generateMarkdown(userResponse) {
 
   let markdown = `# ${userResponse.title}
 
+  `;
+  if (userResponse.confirmLicense !== false && userResponse.license === 'MIT') {
+    markdown += `
+  
   ![badge](https://img.shields.io/badge/license-${userResponse.license}-green)
-   
- 
+
+`;
+  } else {
+    markdown += `
+  
+  ![badge](https://img.shields.io/badge/license-${userResponse.license}-blue)
+
+`;
+  }
+  `
 ## Description 
 
   * ${userResponse.description}
 
 `;
+
   if (userResponse.confirmLink !== false) {
     markdown += `
 ## Link to Active Product
@@ -97,13 +98,21 @@ function generateMarkdown(userResponse) {
 `;
   }
 
-  if (userResponse.confirmLicense !== false) {
+  if (userResponse.confirmLicense !== false && userResponse.license === 'MIT') {
     markdown += `
   
 ## License
   ![badge](https://img.shields.io/badge/license-${userResponse.license}-green)
 
-  * <a src='https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt'>${userResponse.license}</a>
+  * [${userResponse.license}](https://choosealicense.com/licenses/mit/)
+`;
+  } else {
+    markdown += `
+  
+## License
+  ![badge](https://img.shields.io/badge/license-${userResponse.license}-blue)
+
+  * [${userResponse.license}](https://choosealicense.com/community/)
 `;
   }
 
