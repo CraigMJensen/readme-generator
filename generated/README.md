@@ -18,13 +18,13 @@
 
 ## Installation
 
-  * Download the code from my repository on your local machine. If you do NOT have Node.js installed on your machine, download that now. Open your command line or terminal and run 'npm install'. The application should be ready for use.
+  * Clone this repository to your local system. Then install node.js if you don't have it already. Open this in your desired text editor and open your command line. In the command line, locate the file for this repo you cloned and run npm init -y. You can then run this generator with the command 'node index' or' node index.js' and follow the prompts that run through the command line.
 
 
 
 ## Usage
 
-  * In the command line run 'node index' or 'node index.js'. Follow the prompts and fill out all the information you would like to contain in your README.md file. Once all the questions have been answered, your new README.md will be waiting for you in the 'generated' folder. Copy and paste your new README to the file location you desire. You can then add any images, gifs or anything else you like to spice up the page!
+  * When you run 'node index' or 'node index.js' prompts will be displayed in the command line. Answer the questions in the command line. Once the answers have been logged a README.md file will be generated in the generated folder. Copy and paste your new README.md to the location you need.
 
   
 ## License
