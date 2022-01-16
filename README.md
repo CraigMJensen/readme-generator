@@ -10,6 +10,10 @@
 
   * This application will generate a quality README file for your projects. Making a README.md has never been easier! Answer a few questions and fill out some information, then a professional README will be generated in the generated folder.
 
+## Link to Active Product
+
+  * https://watch.screencastify.com/v/AnOJpsBvLNbzVvhw1LBb
+
 ## Table of Contents
 
   * [Installation](#installation)
