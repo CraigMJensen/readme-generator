@@ -1,5 +1,5 @@
 
-  # README Generator
+  # TITLE
   
   
   ![badge](https://img.shields.io/badge/license-MIT-orange)
@@ -8,23 +8,38 @@
 
 ## Description 
 
-  * This application will generate a quality README file for your projects. Making a README.md has never been easier! Answer a few questions and fill out some information, then a professional README will be generated in the generated folder.
+  * description
+
+
+
+## Link to Active Product
+
+  * http://githubname.github.io/linktosite/
 
 ## Table of Contents
 
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Credits](#credits)
   * [License](#license)
+  * [Features](#features)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
 
 ## Installation
 
-  * Clone this repository to your local system. Then install node.js if you don't have it already. Open this in your desired text editor and open your command line. In the command line, locate the file for this repo you cloned and run npm init -y. You can then run this generator with the command 'node index' or' node index.js' and follow the prompts that run through the command line.
+  * Install instructions
 
 
 
 ## Usage
 
-  * When you run 'node index' or 'node index.js' prompts will be displayed in the command line. Answer the questions in the command line. Once the answers have been logged a README.md file will be generated in the generated folder. Copy and paste your new README.md to the location you need.
+  * Usage
+
+
+## Credits
+
+  * Credits
 
   
 ## License
@@ -35,8 +50,26 @@
 
 
 
+## Features
+
+  * Features
+
+
+
+## Contributing
+
+  * Information for any people to help contribute
+
+
+
+## Tests
+
+  * Tests
+
+
+
 ## Questions?
 
-  * Contact me at: cmjensen82@gmail.com
-  * Github: https://github.com/craigmjensen/
+  * Contact me at: email@email.com
+  * Github: https://github.com/githubname/
 
