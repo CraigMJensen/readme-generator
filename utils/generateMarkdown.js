@@ -1,9 +1,10 @@
+// Variables for license links
 const apacheLicense = '(https://choosealicense.com/licenses/apache-2.0/)';
 const gnuLicense = '(https://choosealicense.com/licenses/gpl-3.0/)';
 const iscLicense = '(https://choosealicense.com/licenses/isc/)';
 const mitLicense = '(https://choosealicense.com/licenses/mit/)';
 
-// TODO: Create a function to generate markdown for README
+// Generate Markdown
 function generateMarkdown(userResponse) {
   let generateToC = `## Table of Contents`;
   if (userResponse.confirmInstall) {
@@ -43,7 +44,7 @@ function generateMarkdown(userResponse) {
   }
 
   let markdown = `
-  <h1 align='center'>${userResponse.title}</h1>
+  # ${userResponse.title}
   `;
   if (userResponse.confirmLicense) {
     if (userResponse.license == 'Apache_License_2.0') {
@@ -207,4 +208,5 @@ function generateMarkdown(userResponse) {
   return markdown;
 }
 
+// Exports markdown
 module.exports = generateMarkdown;
